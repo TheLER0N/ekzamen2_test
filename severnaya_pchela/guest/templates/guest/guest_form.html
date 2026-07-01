@@ -1,0 +1,34 @@
+{% extends 'general/base.html' %}
+
+{% block title %}{{ page_title }}{% endblock %}
+{% block h %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <form method="post" novalidate>
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+                <div class="alert alert-danger">{{ form.non_field_errors }}</div>
+            {% endif %}
+
+            {% for field in form %}
+                <div class="mb-3">
+                    <label class="form-label fw-semibold" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
+                    {% for error in field.errors %}
+                        <div class="text-danger small mt-1">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn attention text-white">Сохранить</button>
+                <a href="{% url 'home' %}" class="btn btn-outline-secondary">Назад к списку</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

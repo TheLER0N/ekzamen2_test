@@ -1,0 +1,18 @@
+default_context:
+    student_full_name_rus: "Таболин Марк Евгеньевич"
+    surname_initials_lat: "Tabolin_Mark"
+    db_username: "postgres"
+    db_password: "ТВОЙ_ПАРОЛЬ_ОТ_POSTGRES"
+    db_host: "localhost"
+
+    project_name_rus: "Северная пчела"
+    project_name_lat: "severnaya_pchela"
+    project_description: "Подсистема для сети отелей «Северная пчела»: просмотр, добавление и редактирование гостей, вывод истории остановок."
+
+    main_background_color: "#FFFFFF"
+    aux_background_color: "#f1fe39"
+    attention_color: "#3964fe"
+
+    custom_user: "y"
+    login_required: "n"
+    tests_required: "n"
