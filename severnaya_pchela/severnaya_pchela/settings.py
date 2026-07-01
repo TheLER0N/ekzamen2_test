@@ -53,6 +53,10 @@ INSTALLED_APPS = [
     "guest",
     "gender",
     "status",
+    "history",
+    "roomType",
+    "room",
+    "hotel",
     # } STUD!
 
     # PREP {
