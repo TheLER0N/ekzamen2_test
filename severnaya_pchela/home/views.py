@@ -1,4 +1,5 @@
 from django.views.generic import TemplateView  # PREP
+from guest.models import Guest
 
 
 class HomeView(TemplateView):  # PREP
@@ -11,3 +12,5 @@ class HomeView(TemplateView):  # PREP
     """
 
     template_name = "home/home.html"  # PREP
+
+    model = Guest
