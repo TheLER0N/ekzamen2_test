@@ -11,4 +11,7 @@
 {% endblock %}
 
 {% block content %}
+    {% for object in object_list %}
+        {% include 'objects/main.html' %}
+    {% endfor %}
 {% endblock %}
